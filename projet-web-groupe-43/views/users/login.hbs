@@ -1,0 +1,28 @@
+    <section id="loginSection">
+    <h1>Login</h1>
+
+    <form id="loginForm" method="post" action="/users/login">
+        <div>
+            <label id="loginText">Login (email): </label> <br>
+            <input id="login" type="text" name="memberLogin" value="" placeholder="" required 
+            oninvalid="this.setCustomValidity('Enter your email here')"
+            oninput="this.setCustomValidity('')">
+        </div>
+        <div>
+            <label id="passwordText">Password membre : </label> <br>
+            <input id="password" type="password" name="memberPassword" value="" placeholder="" required 
+            oninvalid="this.setCustomValidity('Enter your password here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div>
+            <input id="button" type="submit" value="Login">
+        </div>
+        <div id="firstTime">
+            First time on ENF ? <a style="color: blue;" href="/users/register">Register</a>
+        </div>
+        <div>
+            {{msg}}
+            {{errors}}
+        </div>
+    </form>
+</section>

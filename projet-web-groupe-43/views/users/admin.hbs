@@ -1,0 +1,83 @@
+<form method="post" action="/users/logout">
+        <div>
+            <button id="logout" class="noselectLogout"><span class='textLogout'>Logout</span><span class="iconLogout"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z"/></svg></span></button>
+        </div>
+</form>
+<h1 id="report_admin">Report</h1>
+<section id="globalAdmin">
+    <section id="leftAdmin">
+        <h1>Reported questions</h1>
+            {{#each questionsReportTable}}
+                <a href="/questions/click?id={{this.question_id}}">
+                    <section class="questionsReportAdmin">
+                        <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                        <p id="title" name="title">{{this.title}} </p>
+                        <p id="question" name="question">{{this.question}} </p>
+                        <p id="date" name="date">{{this.date}} </p> 
+                    </section>
+                </a>         
+                <section class="button">
+                    <form method="post" action="/questions/deleteQuestion">
+                        <input type="hidden" name="id" value="{{this.question_id}}">
+                        <input id="delete_button" type="submit" value="Delete">
+                    </form>
+                    <form method="post" action="/questions/acceptQuestion">
+                        <input type="hidden" name="id" value="{{this.question_id}}">
+                        <input id='accept_button' type="submit" value="Accept">
+                    </form> 
+                </section>      
+            {{/each}}
+    </section>
+    <section id="rightAdmin">
+        <h1>Reported answers</h1>
+        {{#each answersReportTable}}
+            <section class="answersReportAdmin">
+                <p id="answer_id" hidden name="answer_id">{{this.answer_id}}</p>
+                <p id="subjectAnswer" name="subject">{{this.subject}}</p>
+                <p id="answer" name="answer">{{this.answer}}</p>
+                <p id="dateAnswer" name="date">{{this.date}} </p> 
+            </section>
+
+        <section class="button">
+            <form method="post" action="/questions/deleteAnswer">
+                <input type="hidden" name="id" value="{{this.answer_id}}">
+                <input id="delete_button" type="submit" value="Delete">
+            </form>
+            <form method="post" action="/questions/acceptAnswer">
+                <input type="hidden" name="id" value="{{this.answer_id}}">
+                <input id='accept_button' type="submit" value="Accept">
+            </form> 
+        </section>
+        {{/each}}
+    </section>
+</section>
+
+<h1 id="your_questions">Your questions</h1>
+<section id="globalUser">
+    <section id="leftUser">
+        <h1>Open questions</h1>
+            {{#each openQuestionsTable}}
+                <a href="/questions/click?id={{this.question_id}}">
+                    <section class="open">
+                        <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                        <p id="title" name="title">{{this.title}} </p>
+                        <p id="question" name="question">{{this.question}} </p>
+                        <p id="date" name="date">{{this.date}} </p>
+                    </section>
+                </a>
+            {{/each}}
+    </section>
+    <section id="rightUser">
+        <h1>Close questions</h1>
+            {{#each closeQuestionsTable}}
+                <a href="/questions/click?id={{this.question_id}}">
+                    <section class="close">
+                        <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                        <p id="title" name="title">{{this.title}} </p>
+                        <p id="question" name="question">{{this.question}} </p>
+                        <p id="date" name="date">{{this.date}} </p>
+                    </section>
+                </a>
+            {{/each}}    
+    </section>
+</section>

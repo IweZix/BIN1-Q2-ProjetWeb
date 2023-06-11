@@ -1,0 +1,126 @@
+<section>
+    <h1>Question</h1>
+    
+            {{#each questionsTable}}
+            <section>
+                <div class="questionpage">
+                <p id="question_id2" hidden name="question_id">{{this.question_id}} </p>
+                <p id="title2" name="title">{{this.title}} </p>
+                <p id="question2" name="question">{{this.question}} </p>
+                <p id="date2" name="date">{{this.date}} </p> 
+                </div>
+                
+                
+            <form   method="post" action="/questions/reportQuestion">
+            <input type="hidden" name="question_id" value="{{this.question_id}}">
+             {{#if ../boolean}}
+            <input id="reportbutton" type="submit" value="report">
+            {{/if}}
+            </form>
+               
+            
+                
+            {{/each}}
+     
+</section>
+<section>
+     {{#each answersTableCertified}}
+        <section  class="questionpage">
+           <div> 
+            <p id="subject2" name="subject"> {{this.subject}}</p>
+            <p id="answer2" name="answer"> {{this.answer}}</p>
+            <p id="date2" name="date">{{this.date}}</p>
+            
+            {{#if this.certified}}
+            <img src="/images/certified.png" alt="certified_png" id="certified_png">
+            {{/if}}
+            </div>
+            <div id="report2">
+            <form method="post" action="/questions/certified">
+            <input type="hidden" name="id" value="{{this.answer_id}}">
+            <input type="hidden" name="question_id" value="{{this.question_id}}">
+            {{#if ../boolean2}}
+            {{#if ../boolean3}}
+            <input id="certified" type="submit" value="certified">
+            {{/if}}
+            {{/if}}
+            </form>
+            <form method="post" action="/questions/report">
+            <input type="hidden" name="id" value="{{this.answer_id}}">
+            <input type="hidden" name="question_id" value="{{this.question_id}}">
+            {{#if ../boolean}}
+            <input  type="submit" value="report">
+            {{/if}}
+            </form>
+            </div>
+        </section>
+        {{/each}}
+</section>
+<section>
+    
+        {{#each answersTableNotCertified}}
+        <section  class="questionpage">
+           <div> 
+            <p id="subject2" name="subject"> {{this.subject}}</p>
+            <p id="answer2" name="answer"> {{this.answer}}</p>
+            <p id="date2" name="date">{{this.date}}</p>
+            
+            {{#if this.certified}}
+            <img src="/images/certified.png" alt="certified_png" id="certified_png">
+            {{/if}}
+            </div>
+            <div id="report2">
+            <form method="post" action="/questions/certified">
+            <input type="hidden" name="id" value="{{this.answer_id}}">
+            <input type="hidden" name="question_id" value="{{this.question_id}}">
+            {{#if ../boolean2}}
+            {{#if ../boolean3}}
+            <input id="certified" type="submit" value="certified">
+            {{/if}}
+            {{/if}}
+            </form>
+            <form method="post" action="/questions/report">
+            <input type="hidden" name="id" value="{{this.answer_id}}">
+            <input type="hidden" name="question_id" value="{{this.question_id}}">
+            {{#if ../boolean}}
+            <input  type="submit" value="report">
+            {{/if}}
+            </form>
+            </div>
+        </section>
+        {{/each}}
+    
+</section>
+
+<section id="addAnswer">
+    
+    {{#if boolean}}
+    {{#if boolean3}}
+    <h1 id="addAnswerTitle">add an answer</h1> 
+    
+    <form method="post" action="/questions/addAnswer">
+        <div>
+            <div id="addAnswerTitlediv">
+            
+            <input id="adAnswerTitleInput" type="text" name="titleAnswer" placeholder=" title " />
+            </div>
+            <br>
+            <div>
+           
+            <textarea id="addAnswerTextarea" type="text" name="answerAnswer" >enter your answer here... </textarea>
+            </div>
+        </div>
+        
+        <input type="hidden" name="user_idAnswer" value="{{this.user_id}}">
+         
+            <input type="hidden" name="question_idAnswer" value="{{question_id}}">
+        <div>
+            <input id="buttonAnswer" type="submit" >
+        </div>
+    </form>
+    {{/if}}
+    {{/if}}
+    <br>
+</section>
+
+    

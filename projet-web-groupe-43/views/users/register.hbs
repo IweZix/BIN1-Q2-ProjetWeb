@@ -1,0 +1,35 @@
+<section id="registerID">
+    <h1 id="h1Register">Register Account</h1>
+
+    <form class="registerForm" method="post" action="/users/add">
+        <div >
+            <input id="registerClass" type="text" name="memberFirstname" value="" placeholder="firstname" required 
+            oninvalid="this.setCustomValidity('Enter your firstname here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div>
+            <input  id="registerClass" type="text" name="memberName" value="" placeholder="name" required 
+            oninvalid="this.setCustomValidity('Enter your name here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div >
+            <input   id="registerClass"type="email" name="memberEmail" value="" placeholder="email" required 
+            oninvalid="this.setCustomValidity('Enter your email here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div>
+            <input  id="registerClass" type="password" name="memberPassword" value="" placeholder="password" required 
+            oninvalid="this.setCustomValidity('Enter your email here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div >
+            <input   id="registerClass" type="password" name="memberPasswordConfirmation" value="" placeholder="confirm password" required 
+            oninvalid="this.setCustomValidity('Enter your email here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div>
+            <input id="buttonRegister" type="submit" value="Register">
+        </div>
+    </form>
+    {{errors}}
+</section>

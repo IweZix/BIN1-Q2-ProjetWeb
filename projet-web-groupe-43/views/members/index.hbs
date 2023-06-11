@@ -1,0 +1,40 @@
+<section>
+    <form method="post" action="/users/logout">
+        <div>
+            <button id="logout" class="noselectLogout"><span class='textLogout'>Logout</span><span class="iconLogout"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 10v-5l8 7-8 7v-5h-8v-4h8zm-16-8v20h14v-2h-12v-16h12v-2h-14z"/></svg></span></button>
+        </div>
+    </form>
+</section>
+
+<h1 id="your_questions">Your questions</h1>
+<section id="globalUser">
+    <section id="leftUser">
+        <h1>Open questions</h1>
+            {{#each openQuestionsTable}}
+                <a href="/questions/click?id={{this.question_id}}">
+                    <section class="open">
+                        <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                        <p id="title" name="title">{{this.title}} </p>
+                        <p id="question" name="question">{{this.question}} </p>
+                        <p id="date" name="date">{{this.date}} </p>
+                    </section>
+                </a>
+            {{/each}}
+    </section>
+    <section id="rightUser">
+        <h1>Close questions</h1>
+            {{#each closeQuestionsTable}}
+                <a href="/questions/click?id={{this.question_id}}">
+                    <section class="close">
+                        <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                        <p id="title" name="title">{{this.title}} </p>
+                        <p id="question" name="question">{{this.question}} </p>
+                        <p id="date" name="date">{{this.date}} </p>
+                    </section>
+                </a>
+            {{/each}}    
+    </section>
+</section>
+
+    </section>
+</section>

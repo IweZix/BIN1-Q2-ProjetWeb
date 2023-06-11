@@ -1,0 +1,48 @@
+<section id="principal_index">
+
+    <section id="left_index">
+        <h1>Categories</h1>
+        <div id="categories">
+            <nav>
+                <ul>
+                    <li><a href="/categoryJava">Java</a></li>
+                    <li><a href="/categoryJS">JavaScript</a></li>
+                    <li><a href="/categoryPy">Python</a></li>
+                    <li><a href="/categorySQL">SQL</a></li>
+                    <li><a href="/categoryHTML">HTML</a></li>
+                    <li><a href="/categoryCSS">CSS</a></li>
+                    <li><a href="/categorySwift">Swift</a></li>
+                    <li><a href="/categoryCSharp">C#</a></li>
+                    <li><a href="/categoryPHP">PHP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="middle_index">
+        <h1>20 last questions on ENF</h1>
+        <nav id="nav_create_question">
+            <ul>
+                <li><a href="/questions/create"><button>Create a question</button></a></li>
+            </ul>
+        </nav>
+            {{#each questionsTable}}
+            <a href="/questions/click?id={{this.question_id}}"><section class="question">
+                <p id="question_id" hidden name="question_id">{{this.question_id}} </p>
+                <p id="title" name="title">{{this.title}} </p>
+                <p id="question" name="question">{{this.question}} </p>
+                <p id="date" name="date">{{this.date}} </p> 
+            </section></a> 
+            {{/each}}
+    </section>
+
+    <section id="right_index">
+        <h1>Search in ENF</h1>
+        <form method="get" action="/search" id="search">
+            <input type="text" name="searchText">
+            <br>
+            <input id='searchButton' type="submit">
+        </form>
+    </section>
+
+</section>

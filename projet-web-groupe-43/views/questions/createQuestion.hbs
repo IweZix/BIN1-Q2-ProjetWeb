@@ -1,0 +1,38 @@
+<section id="principal_create_question">
+    <p>{{msg}}</p>
+    <form method="POST" action="/questions/add" id="form_create_question">
+        <div id="div_create_question">
+            <label>Subject </h2>
+            <br>
+            <input type="text" name="subject" id="subject" required 
+            oninvalid="this.setCustomValidity('Enter subject here')"
+            oninput="this.setCustomValidity('')"/>
+        </div>
+        <div id="div_create_question">
+            <label>Category </label>
+            <br>
+            <select name="category" id="category">
+                <option value="1"> Java</option>
+                <option value="2">JavaScript</option>
+                <option value="3">Python</option>
+                <option value="4">SQL</option>
+                <option value="5">HTML</option>
+                <option value="6">CSS</option>
+                <option value="7">Swift</option>
+                <option value="8">C#</option>
+                <option value="9">PHP</option>
+            </select>
+        </div>
+        <div id="div_create_question">
+            <label>Question :  </label>
+            <br>
+            <textarea type="text" name="question" id="question" required 
+            oninvalid="this.setCustomValidity('Enter answer here')"
+            oninput="this.setCustomValidity('')"/></textarea>
+        </div>
+        <div>
+            <input type="submit" id="submit" value="submit">
+        </div>
+    </form>
+
+</section> 

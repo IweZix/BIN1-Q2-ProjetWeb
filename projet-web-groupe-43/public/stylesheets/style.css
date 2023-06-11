@@ -1,0 +1,745 @@
+/* TODO create your style */
+
+/***** IMPORT *****/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+/***** START *****/
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/***** GLOBAL *****/
+
+li {
+    list-style: none;
+}
+
+/***** HEADER *****/
+
+header {
+    background-color: #a1ddff ;
+}
+
+header #left img {
+    height: 100%;
+    width: 130%;
+}
+
+#principal_header {
+    display: flex;
+}
+
+#left {
+    width: 15%;
+    height: 115px;
+}
+
+#middle {
+    width: 85%;
+}
+
+#h1-2 {
+    padding-top: 45px;
+    text-align: center;
+}
+
+#right {
+    width: 50%;
+    text-align: right;
+}
+
+#span3{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    padding-top: 30px;
+  }
+
+#span3 a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* tryToFoundTogehter (slogan) by qpi65 */
+#h1-2{
+    color: #484848;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer
+  }
+#h1-2 #span2{
+    transition: .5s linear
+  }
+#h1-2:hover #span2:nth-child(1){
+    margin-right: 5px
+  }
+#h1-2:hover #span2:nth-child(1):after{
+    content: " ";
+  }
+#h1-2:hover #span2:nth-child(2){
+    margin-left: 30px
+  }
+#h1-2:hover #span2{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+
+/* account button */
+#span3 a:before, #span3 a:after{
+    position: absolute;
+    content: "Account";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+#span3 a:before{
+    color: #fff;
+    background: black;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+
+#span3 a:after{
+    color: black;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+
+#span3 a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+/***** register form *****/
+ 
+
+/***** VIEW *****/
+/***** INDEX *****/
+
+#principal_index {
+    display: flex;
+}
+
+#principal_index h1 {
+    border: solid;
+    border-radius: 3px;
+    border-width: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+li {
+    margin-top: 4px;
+}
+
+#left_index {
+    margin-top: 20px;
+    width: 15%;
+    text-align: center;
+}
+
+#middle_index {
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+#nav_create_question {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.question {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+#title {
+    text-decoration: underline;
+    font-size: x-large;
+    padding-left: 10px;
+}
+
+#date {
+    margin-left: 5px;
+    margin-top: -255px;
+}
+
+#right_index {
+    text-align: center;
+    margin-top: 20px;
+    width: 15%;
+}
+
+#search {
+    padding-top: 3px;
+}
+
+#searchButton {
+    margin-top: 4px;
+}
+
+/***** QUESTION *****/
+/***** CREATE QUESTION *****/
+
+#principal_create_question {
+    border: solid;
+    width: 60%;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#form_create_question {
+    text-align: left;
+ 
+}
+
+#div_create_question {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+#subject {
+    width: 50%;
+    margin-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#category {
+    margin-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#question {
+    width: 90%;
+    height: 450px;
+    margin-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#submit {
+    margin-left: 89%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.questionpage {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 250px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+     
+    
+}
+
+#certified_png{
+   width: 40px;
+   height: 40px;
+  
+}
+#addAnswer{
+    margin-top: 20px;
+    
+}
+#addAnswerTitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+#addAnswerTitlediv{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#adAnswerTitleInput{
+    border: solid;
+    border-radius: 24px;
+    
+}
+#addAnswerTextarea{
+    width: 300px;
+    height: 100px;
+    margin-left: 20px;
+}
+#buttonAnswer{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+     
+    
+
+   
+   
+
+
+/***** USER *****/
+/***** lOGIN PAGE *****/
+#loginSection {
+    font-size: larger;
+    text-align: center;
+    margin-top: 15%;
+    height: 200px;
+}
+
+#loginForm {
+    text-align: center;
+}
+
+#loginText{
+    font-size: medium;
+}
+
+#login {
+    border: solid;
+    border-radius: 24px;
+    width: 200px;
+    height: 30px;
+    transition: 0,25s;
+    text-align: center;
+}
+
+#login:focus {
+    width: 250px;
+    border-color: #00FF3C;
+    transition: 0,25s;
+}
+
+#passwordText {
+    font-size: medium;
+}
+
+#password {
+    border: solid;
+    border-radius: 24px;
+    width: 200px;
+    height: 30px;
+    transition: 0,25s;
+    text-align: center;
+}
+
+#password:focus {
+    width: 250px;
+    border-color: #00FF3C;
+    transition: 0,25s;
+}
+
+#button {
+    background-color:white;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+}
+
+#button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#firstTime {
+    font-size: small;
+}
+
+/***** register page *****/
+.registerForm{
+    text-align: center;
+}
+#registerID{
+    font-size: larger;
+    text-align: center;
+    margin-top: 10%;
+    height: 200px;
+}
+#registerClass{
+    border: solid;
+    border-radius: 24px;
+    width: 200px;
+    height: 30px;
+    transition: 0,25s;
+    text-align: center;
+    margin: 5px;
+}
+#buttonRegister{
+    
+    color: black; 
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 24px;
+}
+#buttonRegister:hover{
+    background-color: white;
+    color: #4CAF50;
+}
+
+
+/***** admin page *****/
+
+#globalAdmin {
+    display: flex;
+}
+
+#report_admin {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#leftAdmin {
+    width: 50%;
+    text-align: center;
+}
+
+.questionsReportAdmin {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 250px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 6%;
+}
+
+#delete_button {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#delete_button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid red;
+  }
+  
+#delete_button:hover {
+    background-color: red;
+    color: white;
+}
+
+#accept_button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#accept_button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+#accept_button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button {
+    display: flex;
+    margin-top: -6%;
+    margin-left: 15%;
+}
+
+#rightAdmin {
+    width: 50%;
+    text-align: center;
+}
+
+.answersReportAdmin {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 250px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 6%;
+}
+
+#subjectAnswer {
+    text-decoration: underline;
+    font-size: x-large;
+    padding-left: 10px;
+}
+
+#answer {
+    width: 90%;
+    height: 500px;
+    margin-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#dateAnswer {
+    margin-left: 5px;
+    margin-top: -310px;
+}
+
+#delete_buttonAnswer {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#delete_buttonAnswer {
+    background-color: white; 
+    color: black; 
+    border: 2px solid red;
+  }
+  
+#delete_buttonAnswer:hover {
+    background-color: red;
+    color: white;
+}
+
+#accept_buttonAnswer {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#accept_buttonAnswer {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+#accept_buttonAnswer:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button {
+    display: flex;
+}
+
+#rightAdmin {
+    width: 50%;
+
+}
+
+/***** user page *****/
+#globalUser {
+    display: flex;
+}
+
+#your_questions {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#leftUser {
+    width: 50%;
+    text-align: center;
+}
+
+.open {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 250px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 6%;
+}
+
+#rightUser {
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    border: solid;
+    margin-top: 20px;
+    padding-top: 10px;
+    height: 250px;
+    text-align: left;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 6%;
+}
+
+/* Logout button user/admin */
+.noselectLogout {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  #logout {
+      margin-top: 5px;
+      margin-left: 5px;
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      background: red;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+      background: #e62222;
+  }
+  
+  #logout, #logout span {
+      transition: 200ms;
+  }
+  
+  #logout .textLogout {
+      transform: translateX(35px);
+      color: white;
+      font-weight: bold;
+  }
+  
+  #logout .iconLogout {
+      position: absolute;
+      border-left: 1px solid #c41b1b;
+      transform: translateX(110px);
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  #logout svg {
+      width: 15px;
+      fill: #eee;
+  }
+  
+  #logout:hover {
+      background: #ff3636;
+  }
+  
+  #logout:hover .textLogout {
+      color: transparent;
+  }
+  
+  #logout:hover .iconLogout {
+      width: 150px;
+      border-left: none;
+      transform: translateX(0);
+  }
+  
+  #logout:focus {
+      outline: none;
+  }
+
+/***** FOOTER *****/
+
+footer {
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #a1ddff;
+}
